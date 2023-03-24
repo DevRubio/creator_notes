@@ -1,0 +1,15 @@
+.notecreator{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.textarea{
+    width: 100%;
+    height: 500px;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
