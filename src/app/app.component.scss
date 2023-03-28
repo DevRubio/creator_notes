@@ -13,3 +13,26 @@
     font-size: 16px;
     resize: none;
 }
+ .desSolution{
+    width: 370px;
+    height: 200px;
+}
+
+
+.input-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px 10px 0;
+}
+
+.input-group input{
+    height: 28px;
+    width: 370px;
+}
+
+.input-group select{
+    height: 28px;
+    width: 378px;
+}
+

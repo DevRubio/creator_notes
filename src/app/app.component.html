@@ -5,37 +5,33 @@
   <div>
     <form (ngSubmit)="onRegister()" #notesForm="ngForm">
       <div class="input-group">
-        <label>Agrupador del Error: </label>
+        <label>Agrupador del Error: </label>     
         <input
           type="text"
           [(ngModel)]="searchText"
           placeholder="Buscar.."
           name="agrupador"
         />
-
-        <mat-select
-          [(ngModel)]="selectedOption"
-          name="agrupador1"
-          [(ngModel)]="register.agrupador_error"
-        >
-          <mat-option
-            *ngFor="let option of filteredOptions"
-            [value]="option"
-            placeholder="Buscar.."
-            id="agrupador3"
-          >
-            {{ option }}
-          </mat-option>
-        </mat-select>
       </div>
-
+      <mat-select
+      [(ngModel)]="selectedOption"
+      name="agrupador1"
+      [(ngModel)]="register.agrupador_error"
+    >
+      <mat-option
+        *ngFor="let option of filteredOptions"
+        [value]="option"
+        placeholder="Buscar.."
+        id="agrupador3"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-select>
       <div class="input-group">
         <label>Causa del Error: </label>
         <select name="select" required [(ngModel)]="register.causa_error">
           <option value="0">Seleccione una opcion...</option>
-          <option
-            value="1. Capacitación - Tiene la opción pero no sabe cómo hacerlo"
-          >
+          <option value="1. Capacitación - Tiene la opción pero no sabe cómo hacerlo">
             1. Capacitación - Tiene la opción pero no sabe cómo hacerlo
           </option>
           <option value="2. Capacitación - Desconoce el proceso de Negocio">
@@ -107,13 +103,7 @@
 
       <div class="input-group">
         <label> HU Raizal / Mejora</label>
-        <input
-          type="text"
-          id="raizal"
-          name="raizal"
-          required
-          [(ngModel)]="register.raizal"
-        />
+        <input type="text" id="raizal" name="raizal" required [(ngModel)]="register.raizal"/>
       </div>
 
       <div class="input-group">
@@ -138,12 +128,7 @@
       </div>
       <div class="input-group">
         <label> Diagnostico: </label>
-        <input
-          type="text"
-          required
-          name="diagnostico"
-          [(ngModel)]="register.diagnostico"
-        />
+        <input type="text" required name="diagnostico" [(ngModel)]="register.diagnostico"  />
       </div>
       <div class="input-group">
         <label> Accion Ejecutada </label>
@@ -151,11 +136,11 @@
       </div>
       <div class="input-group">
         <label> Descripcion de Solucion </label>
-        <textarea name="descripcion" [(ngModel)]="register.descripsion">
+        <textarea class="desSolution" name="descripcion" [(ngModel)]="register.descripsion">
         </textarea>
       </div>
       <div class="input-group">
-        <label>Confirmar operatividad del usuario Afectado</label>
+        <label>Confirmar operatividad usuario</label>
         <select name="confirmacion" [(ngModel)]="register.confirmacion">
           <option value="SI">SI</option>
           <option value="No">No</option>
